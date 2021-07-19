@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Uninstall Rimworld</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ACG_ChemfuelPoweredGenerator"]</xpath>
+					<value>
+						<minifiedDef>MinifiedThing</minifiedDef>
+						<thingCategories>
+							<li>BuildingsPower</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ACG_ChemfuelPoweredGenerator"]/statBases</xpath>
+					<value>
+						<Mass>40</Mass>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
